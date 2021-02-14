@@ -10,6 +10,19 @@ const ExpenseForm = () => {
                     placeholder="E.g. Transport"
                 />
             </div>
+            <div className="campo">
+                <label>Expense Amount</label>
+                <input
+                    type="number"
+                    className="u-full-width"
+                    placeholder="E.g. 300"
+                />
+            </div>
+            <input
+                type="submit"
+                className="u-full-width button-primary"
+                value="Add Expense"
+            />
         </form>
     );
 };
