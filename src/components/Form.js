@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Alert from "./Alert";
 
-const Form = () => {
+const Form = ({ setAmounts }) => {
     const [budgetAmount, setBudgetAmount] = useState(0);
     const [hasError, setHasError] = useState(false);
 
@@ -19,6 +19,7 @@ const Form = () => {
         }
 
         setHasError(false);
+        setAmounts({ budget: budgetAmount, remaining: budgetAmount });
     };
 
     return (
