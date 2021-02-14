@@ -13,7 +13,10 @@ function App() {
                     {amounts.budget <= 0 ? (
                         <Form setAmounts={setAmounts} />
                     ) : (
-                        <ControlContainer amounts={amounts} />
+                        <ControlContainer
+                            amounts={amounts}
+                            setAmounts={setAmounts}
+                        />
                     )}
                 </div>
             </header>
