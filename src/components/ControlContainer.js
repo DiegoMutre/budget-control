@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BudgetControl from "./BudgetControl";
 import ExpenseForm from "./ExpenseForm";
 
 const ControlContainer = ({ amounts }) => {
@@ -10,7 +11,7 @@ const ControlContainer = ({ amounts }) => {
                 <ExpenseForm setExpenses={setExpenses} />
             </div>
             <div className="one-half column">
-                {/* ExpenseList here and BudgetControl here */}
+                <BudgetControl amounts={amounts} />
             </div>
         </div>
     );
