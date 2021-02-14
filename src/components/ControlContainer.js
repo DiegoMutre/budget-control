@@ -4,7 +4,7 @@ import BudgetControl from "./BudgetControl";
 import ExpenseForm from "./ExpenseForm";
 import ExpensesList from "./ExpensesList";
 
-const ControlContainer = ({ amounts }) => {
+const ControlContainer = ({ amounts, setAmounts }) => {
     const [expenses, setExpenses] = useState([]);
 
     return (
