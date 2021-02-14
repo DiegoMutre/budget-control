@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ExpenseForm = () => {
+const ExpenseForm = ({ setExpenses }) => {
     const [expenseData, setExpenseData] = useState({
         name: "",
         amount: 0,
