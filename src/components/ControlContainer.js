@@ -1,11 +1,21 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BudgetControl from "./BudgetControl";
 import ExpenseForm from "./ExpenseForm";
 import ExpensesList from "./ExpensesList";
 
 const ControlContainer = ({ amounts, setAmounts }) => {
     const [expenses, setExpenses] = useState([]);
+
+    useEffect(() => {
+        const totalAmount = expenses.reduce((acc, curr) => {
+            return curr.amount + acc;
+        }, 0);
+        setAmounts(prevState => ({
+            ...prevState,
+            remaining: prevState.budget - totalAmount,
+        }));
+    }, [expenses, setAmounts]);
 
     return (
         <div className="row">
