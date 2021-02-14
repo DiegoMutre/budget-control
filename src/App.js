@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ControlContainer from "./components/ControlContainer";
 import Form from "./components/Form";
 
 function App() {
@@ -9,7 +10,11 @@ function App() {
             <header>
                 <h1>Weekly Expense</h1>
                 <div className="contenido-principal contenido">
-                    <Form setAmounts={setAmounts} />
+                    {amounts.budget <= 0 ? (
+                        <Form setAmounts={setAmounts} />
+                    ) : (
+                        <ControlContainer />
+                    )}
                 </div>
             </header>
         </div>
