@@ -6,12 +6,12 @@ export function getAlertColor(budget, remaining) {
     let alertClassName = "alert-success";
 
     // Calculate 25%
-    if (remaining / 4 <= budget) {
+    if (remaining <= budget / 4) {
         return (alertClassName = "alert-danger");
     }
 
     // Calculate 50%
-    if (remaining / 2 <= budget) {
+    if (remaining <= budget / 2) {
         return (alertClassName = "alert-warning");
     }
 
