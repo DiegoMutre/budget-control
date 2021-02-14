@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import BudgetControl from "./BudgetControl";
 import ExpenseForm from "./ExpenseForm";
@@ -15,6 +16,10 @@ const ControlContainer = ({ amounts }) => {
             </div>
         </div>
     );
+};
+
+ControlContainer.propTypes = {
+    amounts: PropTypes.object.isRequired,
 };
 
 export default ControlContainer;
