@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ExpenseForm from "./ExpenseForm";
 
-const ControlContainer = () => {
+const ControlContainer = ({ amounts }) => {
     const [expenses, setExpenses] = useState([]);
 
     return (
