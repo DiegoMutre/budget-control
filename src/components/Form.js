@@ -23,7 +23,7 @@ const Form = ({ setAmounts }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} data-testid="form">
             <h2>Put your Budget</h2>
             {hasError && <Alert message="The amount is not valid" />}
             <input
@@ -31,11 +31,13 @@ const Form = ({ setAmounts }) => {
                 className="u-full-width"
                 placeholder="Put your Budget"
                 onChange={handleChange}
+                data-testid="budget-input"
             />
             <input
                 type="submit"
                 className="u-full-width button-primary"
                 value="Define Budget"
+                data-testid="submit-btn"
             />
         </form>
     );

@@ -3,7 +3,7 @@ import Expense from "./Expense";
 
 const ExpensesList = ({ expenses = [] }) => {
     return (
-        <div className="gastos-realizados">
+        <div className="gastos-realizados" data-testid="expense-list">
             <h2>Expense List</h2>
             {expenses.map(expense => (
                 <Expense key={expense.id} expense={expense} />

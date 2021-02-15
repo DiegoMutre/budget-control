@@ -42,7 +42,7 @@ const ExpenseForm = ({ setExpenses }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} data-testid="expense-form">
             <h2>Add your Expenses here</h2>
             {hasError && <Alert message="All fields are required" />}
             <div className="campo">

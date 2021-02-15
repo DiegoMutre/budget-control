@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 
 const Alert = ({ message }) => (
-    <p className="alert alert-danger error">{message}</p>
+    <p data-testid="alert-message" className="alert alert-danger error">
+        {message}
+    </p>
 );
 
 Alert.propTypes = {

@@ -8,8 +8,13 @@ const BudgetControl = ({ amounts: { budget, remaining } }) => {
 
     return (
         <>
-            <div className="alert alert-primary">Budget: ${budget}</div>
-            <div className={`alert ${alertClassName.current}`}>
+            <div className="alert alert-primary" data-testid="budget">
+                Budget: ${budget}
+            </div>
+            <div
+                className={`alert ${alertClassName.current}`}
+                data-testid="remaining"
+            >
                 Remaining: ${remaining}
             </div>
         </>
