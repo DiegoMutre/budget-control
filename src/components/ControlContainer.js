@@ -23,7 +23,7 @@ const ControlContainer = ({ amounts, setAmounts }) => {
                 <ExpenseForm setExpenses={setExpenses} />
             </div>
             <div className="one-half column">
-                <ExpensesList expenses={expenses} />
+                <ExpensesList expenses={expenses} setExpenses={setExpenses} />
                 <BudgetControl amounts={amounts} />
             </div>
         </div>
